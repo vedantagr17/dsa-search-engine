@@ -11,7 +11,7 @@ Welcome to the Cross-platform Coding Problem Search Engine! This project aims to
 
 ## Introduction
 
-In the modern world, coding skills are essential. Algozenith, as an educational platform, assists learners on this journey by providing relevant coding problems. However, navigating through numerous coding platforms can be daunting. This project aims to simplify this process by developing an efficient search engine.
+In the modern world, coding skills are essential. AlgoZenith, as an educational platform, assists learners on this journey by providing relevant coding problems. However, navigating through numerous coding platforms can be daunting. This project aims to simplify this process by developing an efficient search engine.
 
 ## Problem Statement
 
