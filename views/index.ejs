@@ -219,7 +219,7 @@
         try {
           //   console.log("HELLO");
           const res = await fetch(
-            `http://localhost:5500/search?query=${query}`,
+            `https://code-search-engine-2.onrender.com/search?query=${query}`,
             { method: "GET" }
           );
           const data = await res.json();
@@ -236,7 +236,7 @@
                 .querySelector("a")
                 .setAttribute(
                   "href",
-                  `http://localhost:5500/question/${data[i].id}`
+                  `https://code-search-engine-2.onrender.com/question/${data[i].id}`
                 );
               questionText[i].querySelector("p").innerHTML = data[i].problem;
             }
