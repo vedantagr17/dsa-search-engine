@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Quest - A Search Engine for DSA Problems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/search-code-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="header">
+      <div class="header-container">
+        <div class="header-text">
+          <div class="header-text-1">
+            <h1>Code</h1>
+          </div>
+          <div class="header-text-2">
+            <h1>Quest</h1>
+          </div>
+        </div>
+        <div class="header-logo"></div>
+      </div>
+    </section>
+
+    <section class="header-laptop">
+      <div class="header-laptop-container">
+        <div class="header-laptop-1-container">
+        <div class="header-laptop-1">
+          <div class="header-text-1">
+            <h1>Code</h1>
+          </div>
+          <div class="header-text-2">
+            <h1>Quest</h1>
+          </div>
+        </div>
+        </div>
+        <div class="header-logo"></div>
+      </div>
+    </section>
+
+    <section class="search-form">
+      <form>
+        <input
+          type="text"
+          name="question"
+          id="question"
+          autocomplete="off"
+          autofocus="on"
+          placeholder="Search for DSA problems..."
+        />
+        <!-- <button type="submit" style="margin: 10px;">
+      
+            
+        </button> -->
+      </form>
+    </section>
+
+    <section class="loading-div">
+      <div>
+        <img src="Dual Ring@1x-1.0s-200px-200px.svg" alt="Loading" />
+      </div>
+    </section>
+
+    <section class="no-results">
+      <h1>No results found. Try a different search term.</h1>
+    </section>
+
+    <section class="results">
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+      <div class="question">
+        <div class="title">
+          <a href="#" target="_blank"></a>
+        </div>
+        <div class="body">
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-wrap">
+      <div class="footer-container">
+        <a
+          href="https://www.linkedin.com/in/vedant-agrawal-3b7970140/"
+          target="_blank"
+          class="footer-link link-1"
+          ><img src="icons8-linkedin.svg" alt=""
+        /></a>
+        <a href="mailto: vedantagrawal1709@gmail.com" class="footer-link link-2"
+          ><img src="icons8-mail-50.png" alt=""
+        /></a>
+      </div>
+      <div class="copy-container">&copy; 2024 Made by Vedant Agrawal</div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap"></script>
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let typed = new Typed(".auto-type", {
+        strings: ["Solving^500", "Learning^500", "Growing^500"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+        cursorChar: "_",
+      });
+    </script>
+
+    <script>
+      const form = document.querySelector("form");
+      const questionElement = form.question;
+      const resultSection = document.querySelector(".results");
+
+      const loadingSection = document.querySelector(".loading-div");
+      const questionLinks = document.querySelectorAll(".title");
+      const questionText = document.querySelectorAll(".body");
+      const noResultsDiv = document.querySelector(".no-results");
+      // console.log(questionLinks);
+      // console.log(questionText);
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        loadingSection.style.display = "block";
+        resultSection.style.display = "none";
+        noResultsDiv.style.display = "none";
+
+        for (let i = 0; i < questionLinks.length; i++) {
+          questionLinks[i].querySelector("a").innerHTML = "";
+          questionLinks[i].querySelector("a").setAttribute("href", "#");
+          questionText[i].querySelector("p").innerHTML = "";
+        }
+        const query = questionElement.value;
+
+        try {
+          //   console.log("HELLO");
+          const res = await fetch(
+            `http://localhost:5500/search?query=${query}`,
+            { method: "GET" }
+          );
+          const data = await res.json();
+
+          loadingSection.style.display = "none";
+
+          if (data.length === 0) {
+            noResultsDiv.style.display = "block";
+          } else {
+            resultSection.style.display = "grid";
+            for (let i = 0; i < questionLinks.length; i++) {
+              questionLinks[i].querySelector("a").innerHTML = data[i].title;
+              questionLinks[i]
+                .querySelector("a")
+                .setAttribute(
+                  "href",
+                  `http://localhost:5500/question/${data[i].id}`
+                );
+              questionText[i].querySelector("p").innerHTML = data[i].problem;
+            }
+          }
+
+          console.log(data);
+        } catch (error) {
+          alert(error);
+        }
+      });
+    </script>
+  </body>
+</html>

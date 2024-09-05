@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1a2e;
+  font-family: "Roboto", sans-serif;
+  color: #e94560;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  height: 40vh;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 0;
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    display: block;
+  }
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  height: 100%;
+}
+
+.header-text {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  color: #0f3460;
+}
+
+.header-logo {
+  background: url("./search-code-svgrepo-com.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text-1,
+.header-text-2 {
+  font-size: 4rem;
+  align-self: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .header-text-1,
+  .header-text-2 {
+    font-size: 3rem;
+  }
+}
+
+.header-laptop-container {
+  margin-top: 2rem;
+  display: none;
+  height: 280px;
+  padding: 0 3rem;
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "a b";
+  animation: none;
+  transition: none;
+}
+
+@media screen and (min-width: 901px) {
+  .header-laptop-container {
+    display: grid;
+  }
+}
+
+.header-laptop-1,
+.header-laptop-2,
+.header-laptop-4,
+.header-laptop-5 {
+  /* background: #0f3460; */
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #4974e0;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.header-laptop-1:hover,
+.header-laptop-2:hover,
+.header-laptop-4:hover,
+.header-laptop-5:hover {
+  transform: scale(1.05);
+}
+
+.header-laptop-1 {
+  grid-area: a;
+}
+.header-laptop-2 {
+  grid-area: b;
+}
+.header-laptop-4 {
+  grid-area: c;
+}
+.header-laptop-5 {
+  grid-area: d;
+}
+
+.auto-type {
+  font-size: 2rem;
+  color: #e94560;
+}
+
+.search-form {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+form {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+input {
+  background: #16213e;
+  border: 2px solid #e94560;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #e94560;
+  padding: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* button {
+  background: #e94560;
+  border: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+
+/* button:hover {
+  background-color: #c81e44;
+} */
+
+.loading-div,
+.no-results {
+  display: none;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  color: #e94560;
+}
+
+.results {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.question {
+  flex-basis: calc(33.333% - 20px);
+  margin: 10px;
+  border-radius: 5px;
+  background: #0f3460;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 800px;
+}
+
+.question:hover {
+  transform: scale(1.05);
+}
+
+.question a {
+  text-decoration: none;
+  color: #e94560;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.question p {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.question-div {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  background: #16213e;
+  border-radius: 10px;
+}
+
+.question-div h1 {
+  text-align: center;
+  color: #e94560;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.question-div p {
+  margin-top: 2rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.question-div small {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #e94560;
+  font-size: large;
+
+}
+
+.question-div small a {
+  text-decoration: none;
+  color: #e94560;
+}
+
+.footer-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.copy-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  gap: 20px;
+}
